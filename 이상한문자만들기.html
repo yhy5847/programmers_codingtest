@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //s를 배열로 치환한뒤에 i번째 중 홀수만 치환해주고 짝수 넘어가고
+        //공백은 continue로 넘어가고 횟수 추가 안하는 형식으로
+        function solution(s) {
+            let answer = '';
+            let ss = Array.from(s.toLowerCase());
+            let i = 0;
+            let j = 0;
+            while(i+1 <= ss.length) {
+                ++i
+                if(ss[i-1] === " ") {
+                    answer +=ss[i-1];
+                    j = 0;
+                    continue
+                }else if (j%2 === 0) {
+                    answer +=ss[i-1].toUpperCase()
+                } else if(j%2 === 1){
+                    answer +=ss[i-1]
+                }
+                ++j
+            }
+            return answer
+        }
+        console.log(solution(" try hello world"));
+    </script>
+</body>
+</html>

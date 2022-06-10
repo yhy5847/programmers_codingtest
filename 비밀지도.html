@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 2. or, and
+// 01001 | 11110 = x
+// 0<=x<=2^n-1 (이진수 길이 계산)
+// 각 배열의 값을 or 연산자로 계산하여 
+// 나온 값을 answer배열에
+// #과 공백으로 변환시켜서 넣어준다
+// 숫자를 이진법으로 변환convertToBinary1(9)
+// 이진법 -> 십진법 변수.parseInt(2)
+// 십진법 -> arr1[1].toString(2);
+// arr3[i] = arr1[i] | arr2[i]
+// 배열끼리 or연산자로 값 얻은 후에 이진법으로 바꿔주고
+// 이 값을 문자열로 치환해서 1에는 #을 0에는 공백을 할당하고 치환
+// 이를 arr3에 넣는다
+        function solution(n, arr1, arr2) {
+            let answer = [];
+            for(let i = 0; i < n; ++i) {
+                    answer[i] = ((arr1[i]|arr2[i]).toString(2)).toString().padStart(n,'0').replace(/0/g, ' ').replace(/1/g, '#');
+                }
+            return answer;
+        }
+    </script>
+</body>
+</html>

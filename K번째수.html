@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(array, commands) {
+            let answer = [];
+            let l = 0;
+            let o = 0;
+            while(l < commands.length) {
+            let i = commands[l][0] - 1;
+            let j = commands[l][1] - 1;
+            let k = commands[l][2] - 1; 
+            let m = [];
+            let n = 0;
+                while(i <= j) {
+                        m[n] = array[i];
+                        ++i
+                        ++n
+                }
+            m.sort(function compare(a, b) {return a - b;});
+            answer[o] = m[k];
+            ++l
+            ++o
+            }
+            return answer;
+        }
+
+        // array = [1, 5, 2, 6, 3, 7, 4]
+        // commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
+        // console.log(solution(array, commands))
+    </script>
+</body>
+</html>

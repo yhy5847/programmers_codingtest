@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 정규표현식 사용문제(기초공부요망)
+        // 문자열에 대응하는 숫자를 정규표현식 사용해서 if문으로 할당
+        // 크게는 for문으로 감싸줘서 모든 문자열 숫자로 변할 때까지 반복시킴
+        function solution(s) {
+            var answer = 0;
+            if(s.replace(/zero|one|two|three|four|five|six|seven|eight|nine/g)) {
+                    answer = Number(s.replace(/zero/g, '0').replace(/one/g, '1').replace(/two/g, '2').replace(/three/g, '3').replace(/four/g, '4')
+                    .replace(/five/g, '5').replace(/six/g, '6').replace(/seven/g, '7').replace(/eight/g, '8').replace(/nine/g, '9'));
+                }
+            return answer;
+        }
+    </script>
+</body>
+</html>
