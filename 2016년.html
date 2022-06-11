@@ -7,6 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+function solution(s){
+    let arr = Array.from(s);
+    // p 갯수 세기위한 배열
+    let arrP = [];
+    for(let i = 0; i < arr.length; ++i) {
+        if(arr[i] === "p" || arr[i] === "P") {
+            arrP.push("P");
+        }
+    }
+    // y 갯수 세기위한 배열
+    let arrY = [];
+    for(let i = 0; i < arr.length; ++i) {
+        if(arr[i] === "y" || arr[i] === "Y") {
+            arrY.push("Y");
+        }
+    }
+    // p, y배열 length 비교해서 true | false return
+    if(arrP.length === arrY.length) {
+        return true
+    } else {
+        return false
+    }
+}
+    </script>
 </body>
 </html>

@@ -9,21 +9,18 @@
 <body>
     <script>
 function solution(n) {
-    let N = n;
-    let arrN = [];
-    const answer = [];
-    while(N > 1) {
-        for(let i = 1; i <= n; ++i) {
-            if(N%i === 0) {
-                arrN.push(i)
+    const arr = [];
+    for(let i = 1; i <= n; ++i) {
+        for(let j = 1; j <= i; ++j) {
+            if(j !== 1 && j !== i && i%j === 0) {
+                break;
+            } else if(i === j){
+                arr.push(i)
             }
         }
-        if(arrN.length === 2) {
-                answer.push(n)
-            }
-        --N
     }
-    return answer.length
+    const answer = arr.length - 1;
+    return answer
 }
 console(solution(10))
     </script>

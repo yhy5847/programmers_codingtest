@@ -8,23 +8,14 @@
 </head>
 <body>
     <script>
-function solution(s) {
-    let a = Array.from(s);
-    let b = a.sort();
-    let c = [];
-    let d = '';
-    for(let i = 0; i < b.length; ++i) {
-        if((/[A-Z])/).test(b[i])) {
-            c.push(b[i])
-        } else {
-            d += b[i];
+        function solution(s) {
+            const arr = Array.from(s).sort();
+            const arr2 = [];
+            for(let i = arr.length - 1 ; i >= 0; --i) {
+                arr2.push(arr[i]);
+            }
+            return arr2.join('')
         }
-    }
-    for(let i = 0; i < b.length; ++i) {
-        d += d[i];
-    }
-    return d
-}
     </script>
 </body>
 </html>
