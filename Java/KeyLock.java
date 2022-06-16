@@ -1,14 +1,16 @@
+import java.util.ArrayList;
+
 class KeyLock {
     public static void main(String[] args) {
 
     }
     //key 배열의 1(돌기)위치 기록
     public int[] key1find(int[][] key){
-        int[] key1find = {};
+        ArrayList<Integer> key1find = new ArrayList<Integer>();
             for(int i = 0; i < key.length; ++i){
                 for(int j = 0; j < key.length; ++j){
                     if(key[i][j] == 1) {
-                        key1find
+                        key1find.add()
                     }
                 }
             }
